@@ -18,7 +18,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:3069/register', {
+      const res = await fetch('https://4archivers-interview-app.vercel.app/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

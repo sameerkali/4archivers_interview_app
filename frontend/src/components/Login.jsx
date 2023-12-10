@@ -15,7 +15,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3069/login", {
+      const res = await fetch("https://4archivers-interview-app.vercel.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

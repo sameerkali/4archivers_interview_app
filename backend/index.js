@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-  ofigin: ["https://deploy-mern-1whq.vercel.app"],
+  ofigin: ["http://localhost:5173/"],
   methods: ["POST", "GET"],
   credentials: true
   }
