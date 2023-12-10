@@ -76,10 +76,3 @@ app.listen(port, () => {
 });
 
 
-
-
-/**
- MONGOURI="mongodb+srv://admin:admin123@cluster0.w1vziuo.mongodb.net/"
-NAME="sameer"
-PORT=3069
- */
