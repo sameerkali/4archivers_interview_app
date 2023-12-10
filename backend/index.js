@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
   {
-  ofigin: ["http://localhost:5173/"],
+  ofigin: ["https://interview-tawny.vercel.app"],
   methods: ["POST", "GET"],
   credentials: true
   }
@@ -74,6 +74,9 @@ app.post('/login', async(req, res) => {
   }
 })
 
+app.get("/", (req, res)=>{
+  res.render("home backend")
+});
 
 
 
