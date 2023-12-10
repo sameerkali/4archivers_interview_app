@@ -74,3 +74,12 @@ app.post('/login', async(req, res) => {
 app.listen(port, () => {
   console.log(`listening on ${port}`);
 });
+
+
+
+
+/**
+ MONGOURI="mongodb+srv://admin:admin123@cluster0.w1vziuo.mongodb.net/"
+NAME="sameer"
+PORT=3069
+ */
