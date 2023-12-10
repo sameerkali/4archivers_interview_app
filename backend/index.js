@@ -8,13 +8,7 @@ dotenv.config();
 const port = process.env.PORT || 6969;
 const app = express();
 app.use(express.json());
-app.use(cors(
-  {
-  ofigin: ["https://interview-tawny.vercel.app"],
-  methods: ["POST", "GET"],
-  credentials: true
-  }
-  ));
+app.use(cors());
 
 const mongoURI = process.env.MONGOURI;
 
