@@ -62,15 +62,15 @@ const Heading = () => {
       </div>
       {/* 4 */}
       <div className="max-h-[20rem] overflow-y-auto bg-gray-50 p-4 rounded-2xl">
-        <StaffCard  task={"WIP"} />
-        <StaffCard task={"compleate"}/>
-        <StaffCard task={"pending"}/>
-        <StaffCard task={"compleate"}/>
-        <StaffCard task={"pending"}/>
-        <StaffCard task={"pending"}/>
-        <StaffCard task={"compleate"}/>
-        <StaffCard task={"pending"}/>
-        <StaffCard task={"compleate"}/>
+        <StaffCard />
+        <StaffCard />
+        <StaffCard />
+        <StaffCard />
+        <StaffCard />
+        <StaffCard />
+        <StaffCard />
+        <StaffCard />
+        <StaffCard />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-const StaffCard = ({ task }) => {
+const StaffCard = () => {
   return (
     <>
       <div className="flex mt-5">
@@ -15,7 +15,7 @@ const StaffCard = ({ task }) => {
                 <p>#212</p>
               </div>
               <button className="text-xs bg-blue-600 p-1 rounded-2xl text-white">
-                {task}
+                compleate
               </button>
             </div>
           </h1>
