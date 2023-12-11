@@ -13,6 +13,7 @@ import {
   InboxIcon,
   PowerIcon
 } from "@heroicons/react/24/solid";
+// import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -23,11 +24,13 @@ export default function Sidebar() {
         </Typography>
       </div>
       <List>
+        {/* <Link to="/chart"> */}
         <ListItem className="w-10">
           <ListItemPrefix>
             <PresentationChartBarIcon className="h-5 w-5" />
           </ListItemPrefix>
         </ListItem>
+        {/* </Link> */}
         <ListItem className="w-10">
           <ListItemPrefix>
             <ShoppingBagIcon className="h-5 w-5" />

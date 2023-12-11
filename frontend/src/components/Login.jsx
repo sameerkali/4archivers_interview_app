@@ -17,7 +17,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3069/login", {
+      const res = await fetch("https://backend69.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export default function Login() {
   
       setLoading(false);
       setError(null);
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.log("Error during login:", error.message);
       setLoading(false);
@@ -45,7 +45,7 @@ export default function Login() {
   };
 
   return (
-    <div className="p-3 max-w-lg mx-auto">
+    <div className="p-9 max-w-lg mx-auto bg-gray-50 pt-10 pb-20 mt-20 ">
       <h1 className="text-3xl text-center font-semibold my-7">Sign In</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
@@ -68,7 +68,7 @@ export default function Login() {
         <button
           type="submit"
           disabled={loading}
-          className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+          className="bg-slate-700 bg-[#24496B] text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
         >
           {loading ? "Loading..." : "Sign in"}
         </button>

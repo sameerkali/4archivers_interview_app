@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3069/register", {
+      const res = await fetch("https://backend69.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -40,7 +40,7 @@ export default function SignUp() {
     }
   };
   return (
-    <div className="p-3 max-w-lg mx-auto">
+    <div className="p-9 max-w-lg mx-auto mt-20 bg-gray-50 pt-10 pb-20">
       <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
@@ -67,7 +67,7 @@ export default function SignUp() {
 
         <button
           disabled={loading}
-          className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+          className="bg-slate-700 bg-[#24496B] text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
         >
           {loading ? "Loading..." : "Sign Up"}
         </button>
