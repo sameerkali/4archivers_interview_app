@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
-const StaffCard = ({task}) => {
+import PropTypes from "prop-types";
+const StaffCard = ({ task }) => {
   return (
     <>
       <div className="flex mt-5">
@@ -23,6 +23,11 @@ const StaffCard = ({task}) => {
       </div>
     </>
   );
+};
+
+// Add prop validation for the task prop
+StaffCard.propTypes = {
+  task: PropTypes.string.isRequired
 };
 
 export default StaffCard;
