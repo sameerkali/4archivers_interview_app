@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+// import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import StaffCard from "./StaffCard";
 
 const Heading = () => {
@@ -13,13 +13,13 @@ const Heading = () => {
       </div>
       {/* 2 */}
       <div className="flex justify-between  mt-6">
-        <div className="flex">
-          <strong>Today,</strong>
+        <div className="flex justify-between">
+          <strong className="mr-5">Today,</strong>
           <p>4 october</p>
         </div>
         <div className="flex">
-          <ChevronLeftIcon className="h-7 w-7 " />
-          <ChevronRightIcon className="h-7 w-7 ml-2 " />
+          {/* <ChevronLeftIcon className="h-7 w-7 " />
+          <ChevronRightIcon className="h-7 w-7 ml-2 " /> */}
         </div>
       </div>
       {/* 3 */}
