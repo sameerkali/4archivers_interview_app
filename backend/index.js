@@ -51,3 +51,27 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "scripts": {
+//   "prestart": "npm run build",
+//   "start": "node index.js",
+//   "build": "npm install && npm install --prefix client && npm run build --prefix client",
+//   "dev": "nodemon index.js",
+//   "test": "echo \"Error: no test specified\" && exit 1"
+// },
