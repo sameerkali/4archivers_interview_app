@@ -1,16 +1,55 @@
-
-import { Link } from 'react-router-dom'
+// import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import Welcome from "./Welcome";
+import ChartComponent from "./Chart";
+import DataCards from "../pages/DataCards";
+import StaffSchedule from "./StaffSchedule";
 
 const Home = () => {
   return (
     <>
-
-    <div className='ml-96 mt-56'>Home</div>
-    <Link to="/signup">
-        <button className='p-1 text-white bg-black rounded-md ml-96'>SignUp</button>
-    </Link>
+      <div className="flex">
+        <Sidebar />
+        <div>
+          <Welcome />
+          {/* 2 */}
+          <div className="flex justify-between pl-10 pr-10 bg-gray-100 pb-5">
+          {/* ss */}
+            <div>
+              <div className="flex">
+                <DataCards
+                  icons={`/icon01.png`}
+                  title={`Total Arrival`}
+                  number={`231`}
+                />
+                <DataCards
+                  icons={`/icon02.png`}
+                  title={`Total Booked`}
+                  number={`891`}
+                />
+                <DataCards
+                  icons={`/icon03.png`}
+                  title={`Total Check In`}
+                  number={`129`}
+                />
+              </div>
+              <ChartComponent />
+            </div>
+            <StaffSchedule />
+          </div>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
+
+{
+  /* <div className="ml-96 mt-56">Home</div>
+      <Link to="/signup">
+        <button className="p-1 text-white bg-black rounded-md ml-96">
+          SignUp
+        </button>
+      </Link> */
+}
