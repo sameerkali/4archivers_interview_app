@@ -21,7 +21,7 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 //rendering
-const __dirname = path.resolve();
+const dirname = path.resolve();
 
 // Routes
 app.get("/", home);
@@ -29,9 +29,9 @@ app.post("/register", signup);
 app.post("/login", login);
 
 //rendering
-app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(dirname, "/client/dist")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+  res.sendFile(path.join(dirname, "client", "dist", "index.html"));
 });
 
 app.use(
