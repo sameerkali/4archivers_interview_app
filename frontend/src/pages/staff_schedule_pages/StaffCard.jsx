@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 const StaffCard = () => {
   return (
     <>
@@ -23,11 +23,6 @@ const StaffCard = () => {
       </div>
     </>
   );
-};
-
-// Add prop validation for the task prop
-StaffCard.propTypes = {
-  task: PropTypes.string.isRequired
 };
 
 export default StaffCard;

@@ -70,7 +70,7 @@ const Heading = () => {
         <StaffCard />
         <StaffCard />
         <StaffCard />
-        <StaffCard />
+        
       </div>
     </div>
   );
