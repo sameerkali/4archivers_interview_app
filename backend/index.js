@@ -2,80 +2,36 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const bcryptjs = require('bcryptjs');
+const path = require("path");
+const { home, login, signup } = require("./controller/user.controller");
 
 dotenv.config();
+
 const port = process.env.PORT || 6969;
 const app = express();
+
+// Middleware
 app.use(express.json());
 app.use(cors());
 
-const mongoURI = process.env.MONGOURI;
-
-//mongo
+// MongoDB connection
 mongoose
-  .connect(mongoURI)
-  .then(console.log("mongoose connected"))
-  .catch((err) => console.log(err));
+  .connect(process.env.MONGOURI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
-const signInSchema = new mongoose.Schema(
-  {
-    username: {
-      type: String,
-      required: true
-    },
-    email: {
-      type: String,
-      required: true
-    },
-    password: {
-      type: String,
-      required: true
-    }
-  },
-  { timestamps: true }
-);
+// Routes
+app.get("/", home);
+app.post("/register", signup);
+app.post("/login", login);
 
-const SignInModel = mongoose.model("SignInModel", signInSchema)
-
-
-//mongo end
-
-//register
-app.post('/register', async(req, res) => {
-    const { username, email, password } = req.body;
-  const hashedPassword = bcryptjs.hashSync(password, 10);
-  const newUser = new SignInModel({ username, email, password: hashedPassword });
-  try {
-    await newUser.save();
-    res.status(201).json('User created successfully!');
-  } catch (error) {
-    console.log("sameer bhai error ye hi hai signupka ============", error);
-  }
-})
-//login
-app.post('/login', async(req, res) => {
-    const { email, password } = req.body;
-  try {
-    const validUser = await SignInModel.findOne({ email });
-    if (!validUser) return console.log(404, 'User not found!');
-    const validPassword = bcryptjs.compareSync(password, validUser.password);
-    if (!validPassword) return console.log(401, 'Wrong credentials!');
-    if (validPassword) return console.log(201, 'login successful!');
-    
-  } catch (error) {
-    console.log("sameer bhai error ye hi hai signin ============", error);
-  }
-})
-
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something went wrong!");
 });
 
-
-
+// Start server
 app.listen(port, () => {
-  console.log(`listening on ${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });
-
-

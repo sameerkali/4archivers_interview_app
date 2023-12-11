@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -15,7 +17,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://4archivers-interview-app.vercel.app/login", {
+      const res = await fetch("http://localhost:3069/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,14 +29,18 @@ export default function Login() {
       console.log(data);
   
       if (data.success === false) {
-        console.log(data.message);
+        setLoading(false);
+        setError(data.message);
         return;
       }
   
-      console.log("Login successful");
+      setLoading(false);
+      setError(null);
       navigate("/");
     } catch (error) {
-      console.error("Error during login:", error.message);
+      console.log("Error during login:", error.message);
+      setLoading(false);
+      setError(error.message);
     }
   };
 
@@ -61,9 +67,10 @@ export default function Login() {
 
         <button
           type="submit"
+          disabled={loading}
           className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
         >
-          Sign In
+          {loading ? "Loading..." : "Sign in"}
         </button>
       </form>
       <div className="flex gap-2 mt-5">
@@ -72,6 +79,7 @@ export default function Login() {
           <span className="text-blue-700">Sign up</span> 
         </Link>
       </div>
+      {error && <p className="text-red-500 mt-5">{error}</p>}
     </div>
   );
 }
