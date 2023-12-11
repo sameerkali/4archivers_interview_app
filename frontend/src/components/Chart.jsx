@@ -106,34 +106,23 @@ export default function ChartComponent() {
         className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
       >
         <div>
-          <Typography  variant="h6" color="blue-gray">
+          <Typography variant="h6" color="blue-gray">
             <p className="mt-5 text-[#24496B] text-2xl">Campaign Overview</p>
           </Typography>
-          <div className="flex">
-            <Typography
-              variant="small"
-              color="gray"
-              className="max-w-sm font-normal mr-14"
-            >
-              <div className="flex mt-5">
-                <FireIcon className="h-2 w-2 mt-[6px] text-orange-700 mr-2" />
-                Room visited
-              </div>
+          <div className="flex mt-5">
+            <Typography variant="small" color="gray" className="max-w-sm font-normal mr-14">
+              <FireIcon className="h-2 w-2 mt-[6px] text-orange-700 mr-2" />
+              Room visited
             </Typography>
-            <Typography
-              variant="small"
-              color="gray"
-              className="max-w-sm font-normal"
-            >
-              <div className="flex mt-5">
-                <FireIcon className="h-2 w-2 mt-[6px] text-blue-800 mr-2" />
-                Room Booked
-              </div>
+            <Typography variant="small" color="gray" className="max-w-sm font-normal">
+              <FireIcon className="h-2 w-2 mt-[6px] text-blue-800 mr-2" />
+              Room Booked
             </Typography>
           </div>
         </div>
       </CardHeader>
       <CardBody className="px-2 pb-0">
+        {/* Assuming Chart is a component that receives chartConfig as a prop */}
         <Chart {...chartConfig} />
       </CardBody>
     </Card>

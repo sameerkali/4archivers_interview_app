@@ -3,8 +3,7 @@ import {
   Typography,
   List,
   ListItem,
-  ListItemPrefix,
-  ListItemSuffix
+  ListItemPrefix
 } from "@material-tailwind/react";
 import {
   PresentationChartBarIcon,
@@ -38,10 +37,7 @@ export default function Sidebar() {
           <ListItemPrefix>
             <InboxIcon className="h-5 w-5" />
           </ListItemPrefix>
-
-          <ListItemSuffix></ListItemSuffix>
         </ListItem>
-
         <ListItem className="w-10">
           <ListItemPrefix>
             <UserCircleIcon className="h-5 w-5" />
@@ -56,12 +52,10 @@ export default function Sidebar() {
           <ListItemPrefix>
             <InboxIcon className="h-5 w-5" />
           </ListItemPrefix>
-
-          <ListItemSuffix></ListItemSuffix>
         </ListItem>
         <ListItem className="w-10 mt-[18rem]">
           <ListItemPrefix className="">
-            <PowerIcon className="h-5 w-5 " />
+            <PowerIcon className="h-5 w-5" />
           </ListItemPrefix>
         </ListItem>
       </List>
