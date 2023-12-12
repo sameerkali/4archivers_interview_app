@@ -3,7 +3,7 @@
 # Live Link  [Assignment](https://interview-tawny.vercel.app/).
 
 # It is Proper responsive
-<img src="https://photos.app.goo.gl/TZWmZwZSMpK1W3QM8" alt="image of Project" width="auto" height="auto">
+<img src="frontend/public/homescreen.png" alt="image of Project" width="auto" height="auto">
 
 
 Welcome to Indie Gems Portal, a platform where you can search and discover your favorite games based on various categories.
