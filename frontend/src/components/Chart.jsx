@@ -109,12 +109,12 @@ export default function ChartComponent() {
           <Typography variant="h6" color="blue-gray">
             <p className="mt-5 text-[#24496B] text-2xl">Campaign Overview</p>
           </Typography>
-          <div className="flex mt-5">
-            <Typography variant="small" color="gray" className="max-w-sm font-normal mr-14">
-              <FireIcon className="h-2 w-2 mt-[6px] text-orange-700 mr-2" />
+          <div className="flex mt-5 ">
+            <Typography variant="small" color="gray" className="max-w-sm font-normal mr-14 flex">
+              <FireIcon className="h-2 w-2 mt-[6px] text-orange-700 mr-2 " />
               Room visited
             </Typography>
-            <Typography variant="small" color="gray" className="max-w-sm font-normal">
+            <Typography variant="small" color="gray" className="max-w-sm font-normal flex">
               <FireIcon className="h-2 w-2 mt-[6px] text-blue-800 mr-2" />
               Room Booked
             </Typography>
