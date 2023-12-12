@@ -36,7 +36,7 @@ const Popup = () => {
           </div>
           <div className="">
             <h1 className="text-4xl text-gray-800 font-bold">Assignment Summary</h1>
-            <p className="mt-4 text-gray-800 font-bold">Technologies: MERN</p>
+            <p  className="mt-4 text-gray-800 font-bold">Technologies: MERN <a className="text-green-600"  href="https://github.com/sameerkali/4archivers_interview_app">GitHub repo</a> </p>
             <p className="mt-4 text-gray-800 font-bold">I used API calls in this project: StaffSchedule/Cards</p>
             <p className="mt-4 text-gray-800 font-bold">Working Chart, feel free to play around</p>
             <p className="mt-4 text-gray-800 font-bold">For the backend, I used Node.js, Express, and MongoDB</p>
