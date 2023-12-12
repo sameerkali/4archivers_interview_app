@@ -3,22 +3,14 @@
 # Live Link  [Assignment](https://interview-tawny.vercel.app/).
 
 # It is Proper responsive
-<img src="https://photos.app.goo.gl/TZWmZwZSMpK1W3QM8" alt="image of Project" width="auto" height="auto">
+<img src="frontend/public/homescreen.png" alt="image of Project" width="auto" height="auto">
 
 
-Welcome to Indie Gems Portal, a platform where you can search and discover your favorite games based on various categories.
+It is an assignment for Open Infotech
 
 
 
-## Introduction
 
-Indie Gems Portal is a web application that allows users to search for games based on genres, platforms, release dates, and ratings. It provides a convenient way to explore and find games that match your preferences.
-
-## Features
-
-- Search for games by genre, platform, release date, and rating.
-- Sort search results by popularity, release date, or rating.
-- User-friendly interface for easy navigation.
 
 ## Installation
 
