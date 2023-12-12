@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const StaffCard = ({ taskId, status, imgURL }) => {
   return (
-    <div className="flex mt-5">
+    <div className="flex mt-6">
       <img className="h-7 w-7 rounded-full mr-5" src={imgURL} alt="Profile" />
       <div>
         <h1>

@@ -4,7 +4,6 @@ import StaffCard from "../pages/StaffCard";
 
 const StaffSchedule = () => {
   const [cardData, setCardData] = useState([]);
-  console.log(cardData);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,9 +22,9 @@ const StaffSchedule = () => {
   }, []);
   return (
     <>
-      <div className=" w-[25rem] p-3 bg-white rounded-2xl">
+      <div className="w-[20rem] sm:w-[25rem]  p-3 bg-white rounded-2xl ">
         {/* 1 */}
-        <div className="flex p-2 justify-between mt-6">
+        <div className="flex p-1 justify-between mt-4">
           <h1 className="text-[#24496B] text-2xl">
             Staff <span className="font-bold">Schedule</span>{" "}
           </h1>
@@ -48,10 +47,10 @@ const StaffSchedule = () => {
           <p>Today, 11:32 am</p>
         </div>
         {/* 4 */}
-        <div className="max-h-[20rem] overflow-y-auto bg-gray-50 p-4 rounded-2xl">
-          {cardData.map((data ,i) => (
+        <div className="max-h-[20rem] overflow-y-auto bg-gray-50 p-4   rounded-2xl">
+          {cardData.map((data, i) => (
             <StaffCard
-            key={i}
+              key={i}
               imgURL={data.imgURL}
               taskId={data.taskId}
               status={data.status}

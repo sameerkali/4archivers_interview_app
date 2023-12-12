@@ -4,19 +4,23 @@ import Welcome from "./Welcome";
 import ChartComponent from "./Chart";
 import DataCards from "../pages/DataCards";
 import StaffSchedule from "./StaffSchedule";
+import Popup from "./Popup";
 
 const Home = () => {
   return (
     <>
+      <Popup />
       <div className="flex">
-        <Sidebar />
+        <div className="sm:flex hidden">
+          <Sidebar />
+        </div>
         <div>
           <Welcome />
           {/* 2 */}
-          <div className="flex justify-between pl-10 pr-10 bg-gray-100 pb-5">
-          {/* ss */}
-            <div>
-              <div className="flex">
+          <div className="flex sm:flex-row flex-col   justify-between pl-10 pr-10 bg-gray-100 pb-5">
+            {/* ss */}
+            <div className=" pr-6 sm:pr-0">
+              <div className="flex flex-col sm:flex-row">
                 <DataCards
                   icons={`/icon01.png`}
                   title={`Total Arrival`}

@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.s{
+    color: rgba(184, 215, 241, 0.621);
+}

@@ -13,7 +13,7 @@ const chartConfig = {
   series: [
     {
       name: "Sales",
-      data: [10, 490, 100, 220, 300, 350, 200, 230, 280]
+      data: [10, 90, 100, 220, 120, 190, 200, 230, 300]
     }
   ],
   options: {
@@ -28,7 +28,7 @@ const chartConfig = {
     dataLabels: {
       enabled: false
     },
-    colors: ["#020617"],
+    colors: ["#24496B"],
     stroke: {
       lineCap: "round",
       curve: "smooth"
@@ -96,9 +96,10 @@ const chartConfig = {
   }
 };
 
+
 export default function ChartComponent() {
   return (
-    <Card className="w-[55rem]">
+    <Card className="sm:w-[55rem] w-[19rem] mb-10 ">
       <CardHeader
         floated={false}
         shadow={false}
