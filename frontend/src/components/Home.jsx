@@ -49,11 +49,4 @@ const Home = () => {
 
 export default Home;
 
-{
-  /* <div className="ml-96 mt-56">Home</div>
-      <Link to="/signup">
-        <button className="p-1 text-white bg-black rounded-md ml-96">
-          SignUp
-        </button>
-      </Link> */
-}
+
