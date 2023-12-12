@@ -1,13 +1,12 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const StaffCard = ({ taskId, status }) => {
+const StaffCard = ({ taskId, status, imgURL }) => {
   return (
     <div className="flex mt-5">
-      <img className="h-7 w-7 rounded-full mr-5" src="/jonySir.jpeg" alt="Profile" />
+      <img className="h-7 w-7 rounded-full mr-5" src={imgURL} alt="Profile" />
       <div>
         <h1>
-          Aris nurman{' '}
-          <span className="text-gray-500">completes all tasks</span>{' '}
+          Aris nurman <span className="text-gray-500">completes all tasks</span>{" "}
           <span className="text-gray-900 font-bold">#{taskId}</span>
           <div className="border border-gray-300 p-3 rounded-3xl bg-white">
             <div className="flex">
@@ -25,7 +24,8 @@ const StaffCard = ({ taskId, status }) => {
 };
 
 StaffCard.propTypes = {
-    taskId: PropTypes.number,
-    status: PropTypes.string,
-  };
+  taskId: PropTypes.number,
+  status: PropTypes.string,
+  imgURL: PropTypes.string
+};
 export default StaffCard;

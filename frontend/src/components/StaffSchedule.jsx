@@ -35,9 +35,8 @@ const StaffSchedule = () => {
         <div className="flex justify-between  mt-6">
           <div className="flex justify-between">
             <strong className="mr-5">Today,</strong>
-            <p>4 october</p>
+            <p>12, December</p>
           </div>
-          <div className="flex"></div>
         </div>
         {/* 3 */}
         <Date />
@@ -53,6 +52,7 @@ const StaffSchedule = () => {
           {cardData.map((data ,i) => (
             <StaffCard
             key={i}
+              imgURL={data.imgURL}
               taskId={data.taskId}
               status={data.status}
             />

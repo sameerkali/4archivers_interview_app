@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import Home from "./components/Home";
-// import ChartComponent from "./components/Chart";
+import Error from "./pages/Error";
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
     <Route path="/" element={<SignUp />} />
     <Route path="/home" element={<Home/>} />
     <Route path="/login" element={<Login />} />
-    {/* <Route path="/chart" element={<ChartComponent />} /> */}
+    <Route path="*" element={<Error />} />
     </Routes>
     </BrowserRouter>
   )
